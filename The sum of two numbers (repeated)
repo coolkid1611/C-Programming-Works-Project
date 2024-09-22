@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2, sum;
+    char choice;
+
+    do {
+        // Input two numbers
+        printf("\nEnter the first number: ");
+        scanf("%d", &num1);
+
+        printf("Enter the second number: ");
+        scanf("%d", &num2);
+
+        // Calculate the sum
+        sum = num1 + num2;
+
+        // Display the sum
+        printf("\n\n%d+%d=%d\n", num1, num2, sum);
+
+        // Ask if the user wants to repeat
+        do {
+            printf("\nDo you want to add two more numbers? (y/n): ");
+            scanf(" %c", &choice);
+
+            if (choice == 'n' || choice == 'N') {
+                // Handle the case when the user presses 'n'
+                printf("\n\n\nTHE PROGRAM EXITS. THANK YOU!!!\nBy: J.K. Padro\n\n");
+            } else if (choice != 'y' && choice != 'Y' && choice != 'n' && choice != 'N') {
+                // Invalid input, ask again
+                printf("Invalid input! Please enter 'y' or 'n'.\n");
+            }
+        } while (choice != 'y' && choice != 'Y' && choice != 'n' && choice != 'N');
+
+    } while(choice == 'y' || choice == 'Y');
+
+    return 0;
+}
