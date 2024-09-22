@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//Create a function that calculates the area of a circle
+float area_circle(float radius)
+{
+    return 3*14*radius*radius;
+}
+
+
+int main()
+{
+
+    float r, area;
+
+    printf("Enter the radius: ");
+    scanf("%f", &r);
+
+    area = area_circle(r);
+
+    printf("\n\nThe area of a circle: %f\n\n", area);
+
+    return 0;
+
+}
+
+
+
