@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main(){
+
+    int a=0, b=1, i, n, result;
+
+    printf("\n\n(Note: The 0th term is include, that is 0th the Fibonnaci Term is 0.)\n");
+
+    printf("\nInput the number n: ");
+    scanf("%d", &n);
+
+    printf("\n\nThe first %d Fibonacci numbers: \n\n", n);
+
+    for(i=a; i<=n; i++){
+
+        printf("\t%d\n", a);
+        result = a+b;
+        a=b;
+        b=result;
+    }
+    printf("\n\tBy: J.K. Padro \n", n);
+    return 0;
+}
